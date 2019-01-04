@@ -1,0 +1,138 @@
+What is the difference between REPORT 
+MANAGER and REPORT SERVER:
+
+The Report Server defines the nature of the
+installation of SQL Server Reporting 
+Services.
+
+It comes in a native and Share Point mode. 
+Native mode is the default and used in 80% 
+of the industry. 
+
+The Report Server database contains all 
+properties, objects and metadata related 
+to an SSRS unit. So, a Report Server is the
+tool that works behind the Report Manager. 
+It is responsible for authentication, data 
+processing, rendering and delivery options.
+
+The Report Manager gives us the capacity to
+adminsiter the Report Server.
+
+It is the web-based interface that can be 
+used to access and manage SSRS reports. The
+Report Manager is not available in 
+SharePoint mode.
+
+End users can run reports from Report 
+Manager, create subscriptions, and publish 
+their own reports if they have permission.
+
+In a recent project I was working on I used
+the Report Manager to setup users and give 
+access to specific reports to the relevent 
+managers and individuals who needed to view
+them.
+
+I also setup a Subscription to send to 
+certain Managers on a weekly basis. They 
+needed these reports first thing on a 
+Monday morning and also every Friday 
+morning. The Report Manager helped me to 
+set these report subscriptions up for them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Name 3 of the less common Report Items and
+how you used them:
+
+The 3 less common Report Items I have used
+are the Sparkline Area chart, the Image 
+item, and the Meter Gauge.
+
+Sparklines are small, simple charts that 
+convey a lot of information in a little 
+space, and it is used inline with text. 
+There are as many types of sparklines as 
+there are regular charts, with a few 
+exceptions. 
+
+The Image is a report Item that contains 
+a reference to an image. The image can be 
+embedded in the report, stored in a 
+database or report server, or stored 
+somewhere on the Web.
+
+The Gauge Meter is a report Item that 
+depicts a single value in a dataset. Its 
+shape and simplicity make it easy to read,
+even when it is small and inside a table 
+cell.
+
+In a recent project I worked on, the 
+requirement was to have an image for each
+product, repeated with each row of data. 
+This was to provide an illustration of 
+each product to make it more interesting 
+and perhaps provide a better understanding
+of the report. The Image item was useful 
+for this. In another report, I used custom
+green, yellow, and red icon images to 
+highlight whether a customer was least 
+likely to churn (green), most likely to 
+churn (red), or somewhere in the middle 
+(yellow). An example of churn rate is the
+rate at which customers stop subscribing 
+or employees leave a job, and so forth.
+
+Part of the same report and the 
+requirement to provide as many visual 
+aids as necessary to their reports, I 
+used the Sparkline line chart inline with
+text to help in illustrating different 
+trends without having the visual aid take
+up too much space in the report. I found 
+this to be a very easy way to make a 
+point, because it helps to emphasize and 
+describe the trend as the user reads the 
+report.
+
+The Gauge Meter, helped to depict a single
+KPI value to clearly illustrate the most 
+important measurements of the business 
+success. Senior managers love to have a 
+clear indication of where the successes 
+are and how they compare with other 
+categories, so the Gauge Meter catered 
+to this requirement without taking up a 
+large amount of space on the report. In 
+fact when rows are sorted by this column,
+it paints an inormously clear picture of 
+how the business is doing as the details 
+of the report is being read.
+
+Now, even though I have not used these 3 
+items on a regular basis, I have found 
+them to be enormously useful. Of course 
+I could have used the Indicator gauge but
+with the Image item the customer wanted 
+custom images and a specific look and 
+feel that suited their brand more 
+appropriately.
+
+These are 3 really great tools in the 
+SSRS toolkit.
+
