@@ -42,6 +42,38 @@ morning. The Report Manager helped me to
 set these report subscriptions up for them.
 
 
+The important things to remember when setting
+up Subscriptions via the Report Manager is 
+to make sure the specific report and it's 
+children's Data Source is correctly setup 
+all with the correct Credentials. Do not 
+check the "try to impersonate the user..." 
+box, it will test correctly but not allow 
+a new Subscription to be created, unless 
+you know what you're doing. If you're 
+using the "Windows File Share" option 
+for the Destination of the Report, make 
+sure your path is in the correct Network 
+format: 
+"\\ComputerName\Users\Mark\Documents", 
+and once again enter the correct Credentials.
+
+So, once again, the Report Manager basically
+sits on top of the Report Server as a 
+graphical user interface that helps to 
+manage the Report Server which does the
+behind the scenes heavy lifting.
+
+The Report Manager is where you can create
+new Data Sources, Datasets, KPI's, manage 
+security, schedules, company branding, 
+subscriptions, and of course, your reports.
+
+These are some of the main differences 
+between the Report Manager and Report
+Server.
+
+
 
 
 
