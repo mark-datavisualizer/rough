@@ -1,3 +1,140 @@
+Hello everyone, as we all know, 
+the project has taken longer than 
+expected, so the Company has hired 
+2 SSRS Developers from China to 
+finish the project.
+
+I will be going over what we did in
+Stories 7-9 and our 2 new developers
+will complete Story 10:
+
+For Story 7, the Loan Department 
+Executive required BI Analytical 
+reports on a week-to-date, 
+month-to-date and year-to-date 
+basis so that she could manage 
+the loan processing business a 
+lot better than currently. 
+She wanted to know the Loans to 
+Date for Total loans, the 
+Purpose of the loan, the Loan 
+amount breakdown and the 
+Property usage.
+
+For all the reports Story 7-9, I 
+created 6 parameters, so the report
+user can filter the data by Report 
+Date, by Loan Amount, Loan Purpose,
+Property Usage, Age, Marital Status,
+Age, and Sex.
+
+Of course, having the 6 parameters 
+means that the report user can 
+filter out what they want to see, 
+whether by Age, loan amount, Loan 
+Purpose, Property Usage, and so 
+forth.
+
+For the Loan To Date requirement I 
+created a Loans To Date Dashboard 
+and this included subreports like a
+Pie Chart that shows the user the 
+number of loans to Date and the 
+number of loans on any given date.
+
+In order to fulfill the requirement
+for week-to-date, month-to-date and
+year-to-date reports, I created 3 
+stacked column charts for this 
+Dashboard.
+
+From the SQL side of things, I 
+created a stored procedure for 
+LoansProcessed_ToDate, which 
+services all for reports.
+
+Story 8 was basically a continuation
+of Story 7, where the Department 
+Executive wanted to know the 
+Loans-to-date for Demographics like
+Marital Status, Race, and Sex. 
+Here I created 4 stacked column 
+charts using the the same 
+LoansProcessed_ToDate stored 
+procedure.
+
+Story 9 was a bit more complex and 
+required additional Stored 
+Procedures for LoanGauges, 
+LoansByMonth, LoansByQuarter, and 
+the Avg Loan's Monthly Income By 
+Month.
+
+I created the Loan Overview 
+Dashboard which consists of 3 
+subreports, namely: 
+
+the Gauge Subreport that shows the 
+MTD vs Prior 6 Month Avg, the Last 
+Mth vs Prior 6 Mth Avg, and the 
+QTD vs Last Full Quarter, loans.
+
+The Area Chart Subreport shows the 
+Avg Loan and its % of Monthly 
+Income By Month.
+
+THe 3D Clustered Cylinder chart 
+Subreport shows the Loan Count By 
+Month and the Loan Count By 
+Quarter.
+
+So, in summary, Stories 7-9 has 
+produced 3 Dashbords, the LTD 
+Dashboard, the Demographics 
+Dashboard, and the Overview 
+Dashboard.
+
+The LTD Dashboard shows a LTD Pie 
+Chart and 3 stacked column charts 
+showing the Count of Loans To Date 
+by Purpose of Loan, by Property 
+Usage, and by Loan Amount. 
+
+The Demographics Dashboard has 4 
+stacked column charts showing Loans
+To Date by Race, Marital Status, 
+Sex, and Age group.
+
+The Overview Dashboard shows the 
+MTD vs Prior 6 Month Avg, the Last 
+Mth vs Prior 6 Mth Avg, and the QTD
+vs Last Full Quarter, loans, the 
+Avg Loan and its % of Monthly 
+Income By Month, and the Loan Count
+By Month and the Loan Count By 
+Quarter.
+
+I wish our new SSRS Developers well
+for Story 10, the BRD will guide 
+you through the process, I know 
+you will succeed in completing the 
+project soon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 What is the difference between REPORT 
 MANAGER and REPORT SERVER:
 
