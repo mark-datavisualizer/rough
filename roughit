@@ -1,3 +1,173 @@
+What are the various type of reports 
+you have developed?
+
+I have developed Subreports, 
+Parameterized reports, Drillthrough 
+and Drilldown reports.
+
+I will discuss the Parameterized, 
+Subreport, and Drilldown report.
+
+The parameterized report uses input 
+values so you can vary the output of 
+a report based on those input values 
+that are set when the report runs.
+
+A Parameterized report is frequently 
+used in conjunction with drillthrough
+reports to filter related data.
+
+A Subreport displays inside another 
+report, so it is any report within a 
+report. The parent report can pass 
+parameters to the subreport. A 
+Dashboard report usually contains 
+Subreports.
+
+A Drilldown report contains all the 
+relevant data, but it initially hides
+the complexity of the dataset in the 
+format of a Summary and enables the 
+user to toggle the hidden report 
+items to reveal the existing details.
+
+So, both the Summary and Details are 
+in the same report and can be 
+accessed as desired. It is an 
+hiearchy of information, moving from 
+Summary to more details as more 
+sections are expanded.
+
+In a recent project I worked on, the 
+technical requirement was for 4 
+Dashboards, each linked to each other,
+and each containing 3-4 subreports, 
+where each chart is linked to a 
+drill-Down report.
+
+The Department Executive required BI 
+Analytical reports on a week-to-date,
+month-to-date and year-to-date basis 
+so that she could manage the business
+a lot better than currently. She 
+wanted to know the Sales to Date for 
+Total sales, the Purpose of the sale,
+the sale amount breakdown and the 
+Product usage.
+
+For all these reports, I created 6 
+parameters, so that the report user 
+could filter the data by Report Date, 
+by sale Amount, sale Purpose, Product 
+Usage, Age, Marital Status, Age, and 
+Sex. 
+
+All the reports I will discuss is a 
+combination of a Parameterized report
+and either a subreport or drill-down 
+report.
+
+Now, of course, having the 6 
+parameters means that the report user
+can filter out what they want to see,
+whether by Age, sale amount, sale 
+Purpose, Product Usage, and so forth.
+
+And SSRS conveniently provides the 
+dropdownlists for each Parameter 
+created in the report. So if the 
+Report User wants to see the Sales to
+Date by Age Group, she merely has to 
+deselect all, and choose the Sales to
+Date date and the Age Group that she 
+wants to see the results of.
+
+SQL Server in turn uses those 
+selected Parameters and filters out 
+the unselected values and returns a 
+dataset WHERE the date equals to the 
+selected date and the Age range 
+equals the selected Age Group.
+
+For the Loan To Date requirement I 
+created a Loans To Date Dashboard and
+this included subreports like a Pie 
+Chart that shows the user the number 
+of loans to Date and the number of 
+loans on any given date. 
+
+In order to fulfill the requirement 
+for week-to-date, month-to-date and 
+year-to-date reports, I created 3 
+stacked column charts for this 
+Dashboard.
+
+From the SQL side of things, I 
+created a stored procedure for 
+LoansProcessed_ToDate, which 
+services all 4 reports.
+
+For the Demographics Dashboard that 
+included Marital Status, Race, and 
+Sex, I created 4 stacked column 
+charts using the the same stored 
+procedure.
+
+For the Overview Dashboard I used 
+numerous gauge, area charts, and 
+3D Clustered Cylinder charts to 
+compare MTD, QTD, counts by month
+and quarter, as well as the 
+avgerage percentage comparisons 
+by month.
+
+Finally for the Drill-Down Reports, 
+I created a single Drill-Down that 
+returns specific details based on 
+the User's selection of YearToDate, 
+MonthToDate, WeekToDate in any of the
+Charts from the LTD or Demographics 
+Dashboards. 
+
+For example, if the report user 
+goes to the LTD Dashboard and 
+from the Drill-Through Pie Chart 
+she clicks on the YearToDate slice, 
+this Drill-Through Action on the 
+Pie Chart, takes the user to the 
+Drill-Down Report, which I setup to
+initialize as a summary but upon 
+toggling the + symbol, information 
+about the ReportMonth, Custmer Name, 
+Purchases, and Risk status is 
+displayed, providing very valuable
+customer related information.
+
+So, in summary, for this project I 
+developed 4 Dashboards having all 
+reports use cascading Parameters, 
+11 subreports that also serve as 
+Drill-Through reports that drill 
+through to a parameterized Drill-Down
+report, that serves each subreport 
+with its respective parameter 
+criteria.
+
+The Department Executive was clearly
+very pleased with everything
+and is now able to managed her 
+department much more efficiently 
+having User Friendly Dashboards and 
+Reports that make available important 
+business information for her disposal.
+
+*******************************************
+
+
+
+
+
+
 Hello everyone, as we all know, 
 the project has taken longer than 
 expected, so the Company has hired 
