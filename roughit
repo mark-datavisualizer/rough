@@ -4,7 +4,6 @@ you have developed?
 I have developed Subreports, 
 Parameterized reports, Drillthrough 
 and Drilldown reports.
-
 I will discuss the Parameterized, 
 Subreport, and Drilldown report.
 
@@ -12,7 +11,6 @@ The parameterized report uses input
 values so you can vary the output of 
 a report based on those input values 
 that are set when the report runs.
-
 A Parameterized report is frequently 
 used in conjunction with drillthrough
 reports to filter related data.
@@ -23,7 +21,6 @@ report. The parent report can pass
 parameters to the subreport. A 
 Dashboard report usually contains 
 Subreports.
-
 A Drilldown report contains all the 
 relevant data, but it initially hides
 the complexity of the dataset in the 
@@ -37,7 +34,6 @@ accessed as desired. It is an
 hiearchy of information, moving from 
 Summary to more details as more 
 sections are expanded.
-
 In a recent project I worked on, the 
 technical requirement was for 4 
 Dashboards, each linked to each other,
@@ -54,7 +50,6 @@ wanted to know the Sales to Date for
 Total sales, the Purpose of the sale,
 the sale amount breakdown and the 
 Product usage.
-
 For all these reports, I created 6 
 parameters, so that the report user 
 could filter the data by Report Date, 
@@ -66,7 +61,6 @@ All the reports I will discuss is a
 combination of a Parameterized report
 and either a subreport or drill-down 
 report.
-
 Now, of course, having the 6 
 parameters means that the report user
 can filter out what they want to see,
@@ -88,7 +82,6 @@ the unselected values and returns a
 dataset WHERE the date equals to the 
 selected date and the Age range 
 equals the selected Age Group.
-
 For the Loan To Date requirement I 
 created a Loans To Date Dashboard and
 this included subreports like a Pie 
@@ -101,7 +94,6 @@ for week-to-date, month-to-date and
 year-to-date reports, I created 3 
 stacked column charts for this 
 Dashboard.
-
 From the SQL side of things, I 
 created a stored procedure for 
 LoansProcessed_ToDate, which 
@@ -112,7 +104,6 @@ included Marital Status, Race, and
 Sex, I created 4 stacked column 
 charts using the the same stored 
 procedure.
-
 For the Overview Dashboard I used 
 numerous gauge, area charts, and 
 3D Clustered Cylinder charts to 
@@ -128,7 +119,6 @@ the User's selection of YearToDate,
 MonthToDate, WeekToDate in any of the
 Charts from the LTD or Demographics 
 Dashboards. 
-
 For example, if the report user 
 goes to the LTD Dashboard and 
 from the Drill-Through Pie Chart 
@@ -152,7 +142,6 @@ through to a parameterized Drill-Down
 report, that serves each subreport 
 with its respective parameter 
 criteria.
-
 The Department Executive was clearly
 very pleased with everything
 and is now able to managed her 
