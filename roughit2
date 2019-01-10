@@ -1,0 +1,98 @@
+One of the more recent projects I've worked 
+on was for a Mortgage Lending Company that 
+used the standard 1003 Application Form for 
+all applicants.
+
+The essential requirements were:
+Data validations according their online 
+website required fields.
+
+The Data warehouse had to meet the future 
+growth of the group and reports had to 
+provide business intelligence on an daily, 
+weekly, monthly, quarterly and yearly basis.
+
+The company wanted frequent project 
+deliverables and required the Agile 
+methodology to be used.
+ 
+I divided the project into 2 Releases, 
+6 Sprints and 10 User stories. 
+
+Release 1 entailed the ETL process using SSIS
+and Release 2 was the Report creation process
+using SSRS.
+
+Story 1 dealt mainly with the gathering and 
+documenting of all the Application data from 
+3 different sources, the customer's OLTP 
+Database and also from XML and Excel files.
+
+Story 2 and 3 dealt with the Extracted, 
+Transformation, and Loading of the data into 
+4 Staging tables.
+
+In order to speed up and shorten the SSRS 
+loading process of the XML data, I 
+denormalized the XML structure.
+
+For the OLTP database data source I used a 
+JOIN to load all the OLTP data into 1 OLEDB 
+Source. I also used an Excel Source for the 
+Excel files and a C# script to ensure the 
+data was captured accurately into the Excel 
+spreadsheet.
+
+I sent all the data through a Data Conversion
+Transformation because of the Unicode data 
+types from the Excel and XML sources.
+
+With help of a Sort and Merge Transformation 
+I combined all the data and used a Multicast 
+to split them into their respective Staging 
+tables.
+
+Story 4 dealt with Data Validation and 
+Error Handling. Here I seperated the 
+Good and Bad data using the Conditional Split
+Transformation, and returned the Bad data to 
+the customer for correction. The Bad Data had
+unwanted NULL rows, incorrect number of 
+digits for phone numbers, Social Security 
+Numbers, and Zip codes.
+
+In order to send the Bad Data back for 
+correction and validation via email, I used 
+an Execute SQL Task and SendMail Stored 
+Procedure, using the Database Mail in 
+SQL Server.
+
+Story 5: The Good data then went through a 
+Data Conversion and finally loaded to an 
+ODS (Operational Data Store) database in 
+SQL Server, into a single table.
+
+Story 6: involved creating an OLAP 
+(Online Analytical Processing) data warehouse
+to maintain the history, for data analysis, 
+long term storage, and reporting.
+
+I developed a Multidimentional Star Schema 
+which consisted of a Fact table and 
+3 Dimensions. In order to keep the history of
+specific information like changed Last Name 
+and Loan Amount, I used the SSIS Slowly 
+Changing Dimension Transformation forTypes 1 
+and 2. So when a Last Name changes, perhaps 
+due to marriage, then the SCD would INSERT 
+the new row with the new Last Name and set 
+the value in the Status column to Current 
+while setting the Status of the original row 
+to Expired. For the Loan Amount, the SCD new 
+row had a NULL value in the date column and 
+a date and time in the EndDate column. I also
+developed a simple SQL MERGE Stored Procedure
+to take care of any Type 3 requirements.
+
+
+
