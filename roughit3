@@ -1,0 +1,165 @@
+How would you Troubleshoot a 
+Slow Report?
+
+First check the Report Server 
+execution log and see how many 
+times the report has run, the 
+start and end times, make sure it
+is not running at peak network 
+traffic times, if possible, and 
+check the amount of time the 
+report has spent on data retrieval,
+and report processing, and report 
+rendering.
+
+So, use the Profiler on the query
+to compare the Query runtime to 
+the Report Runtime.
+
+If the data retrieval is taking a
+long time then determine how 
+much data is really needed by the
+report, and retrieve only what is
+needed.
+
+Try and reduce the number of times
+the DISTINCT and UNION ALL 
+operators are used.
+
+In a recent project I worked on, 
+I encountered a report that was 
+running slowly. So, the first thing
+I did was to make sure there were 
+no SELECT ALL statements and 
+replaced those with the column 
+names that were needed.
+
+I also made sure the WHERE and
+HAVING clauses were used wherever 
+it would help limit the data 
+retrieval to only what was 
+necessary. 
+
+I used the GROUP BY clause to 
+aggregate the data since it is 
+more efficiently done in 
+SQL Server vs SSRS.
+
+I checked for bad JOINS and made 
+sure the data filters like the 
+WHERE and HAVING clauses were 
+used before any JOINS because this
+reduces the volume of data 
+needing to be JOINED. 
+
+I made sure to Sort the 
+data in SQL because Sorting in 
+SSRS is a blocking Transformation.
+
+I also added INDEXES where having 
+them would improve the performance.
+These steps were enormously useful
+in improving the data retrieval of
+report.
+
+In order to improve the Report 
+Processing time, I considered 
+things like the Report Layout, 
+Paging, and Complex Expressions.
+
+I removed Expressions from page 
+headers and footers, incorporated
+page breaks where possible, and I 
+reduced subreports where having 
+them did not provide any added 
+benefit or use.
+
+I also used Shared Datasets so that
+changes in a dataset are immediate
+to all reports using it. This 
+reduces the time it would take to 
+update each non-shared dataset 
+that was very similar to other 
+non-shared dataset.
+
+I cached Parameters, in the event
+of a large numbers of report 
+Parameters, and set default 
+parameter values to constrict some
+of the data coming in, and ensured
+the data types were compatible with
+SQL Server data types. This 
+eliminates the need for 
+SSRS Data Conversions.
+
+I replaced datasets with Stored 
+Procedures since SP can be 
+scheduled to run during low network 
+traffic time and cache the report to
+run on preloaded data.
+
+In order to improve the Report 
+Rendering time, I considered 
+things like the volume of data, the
+number of instances of a report 
+item, and paging.
+
+Using page breaks allowed the 
+report to load 1 page at a time, 
+so the user can view the first 
+page while the others are being 
+loaded in the background.
+
+I reduced the size of any images 
+and subreports used.
+
+I used matrixes instead of 
+visualizations when very large 
+volumes of data was needed.
+
+Now, if the report has to be 
+deliver to the user first thing in 
+the morning, during peak network 
+traffic time, it might be a good
+idea to create an email 
+subscription with a Snapshot of 
+the data so you can schedule the
+report to run during low network 
+traffic time, and then email the
+report to users so they don't have 
+to deal with a report that is 
+running slowly due to early morning 
+network traffic.
+
+So, for a report that is running 
+slowly, I instinctively start by 
+checking the amount of time the 
+report has spent on data retrieval, 
+report processing, 
+and report rendering.
+
+And, if it is due to network traffic,
+go ahead and see whether setting up
+a Report Subscription would solve 
+the problem and make the customers 
+morning a little brighter.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
