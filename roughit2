@@ -97,6 +97,57 @@ to take care of any Type 3 requirements.
 SSRS: Now on to the Report Creation in SSRS
 Release 2, Sprints 5 and 6, Stories 7 - 10
 
+The Loan Department Executive wanted to 
+know the Loans to Date for Total loans, 
+the Purpose of the loan, the Loan amount 
+breakdown and the Property usage.
+
+So, in summary, Stories 7-9 has produced 
+3 Dashbords, the LTD Dashboard, the 
+Demographics Dashboard, and the Overview Dashboard.
+
+The LTD Dashboard shows a LTD Pie Chart and 
+3 stacked column charts showing the 
+Count of Loans To Date by Purpose of Loan, 
+by Property Usage, and by Loan Amount. 
+
+The Demographics Dashboard has 4 stacked 
+column charts showing Loans To Date by Race, 
+Marital Status, Sex, and Age group.
+
+The Overview Dashboard shows the 
+MTD vs Prior 6 Month Avg, the 
+Last Mth vs Prior 6 Mth Avg, and the 
+QTD vs Last Full Quarter, loans, 
+the Avg Loan and its % of Monthly Income By Month, 
+and the Loan Count By Month and the Loan Count By Quarter.
+
+Finally, Story 10 entailed tying all the
+reports together using Drill-Through functionality
+on the subreports. They drilled through to one Drill-Down 
+Dashboard, dynamically changing the information
+based on the Parameters of the subreport.
+
+Together, the 4 Dashboards and 11 subreports
+delivered a very powerful tool that is right
+now being used to assist the company in making 
+better decisions about their business.
+
+I provided a robust ETL process using SSIS
+and a very useful Reporting tool that will
+serve the company well.
+
+
+
+
+
+
+
+
+
+
+
+
 For Story 7, the Loan Department Executive
 wanted to know the Loans to Date for Total loans, 
 the Purpose of the loan, the Loan amount 
@@ -147,48 +198,6 @@ Avg Loan and its % of Monthly Income By Month.
 The 3D Clustered Cylinder chart Subreport 
 shows the Loan Count By Month and the 
 Loan Count By Quarter.
-
-So, in summary, Stories 7-9 has produced 
-3 Dashbords, the LTD Dashboard, the 
-Demographics Dashboard, and the Overview Dashboard.
-
-The LTD Dashboard shows a LTD Pie Chart and 
-3 stacked column charts showing the 
-Count of Loans To Date by Purpose of Loan, 
-by Property Usage, and by Loan Amount. 
-
-The Demographics Dashboard has 4 stacked 
-column charts showing Loans To Date by Race, 
-Marital Status, Sex, and Age group.
-
-The Overview Dashboard shows the 
-MTD vs Prior 6 Month Avg, the 
-Last Mth vs Prior 6 Mth Avg, and the 
-QTD vs Last Full Quarter, loans, 
-the Avg Loan and its % of Monthly Income By Month, 
-and the Loan Count By Month and the Loan Count By Quarter.
-
-Finally, Story 10 entailed tying all the
-reports together using Drill-Through functionality
-on the subreports. They drilled through to one Drill-Down 
-Dashboard, dynamically changing the information
-based on the Parameters of the subreport.
-
-Together, the 4 Dashboards and 11 subreports
-delivered a very powerful tool that is right
-now being used to assist the company in making 
-better decisions about their business.
-
-I provided a robust ETL process using SSIS
-and a very useful Reporting tool that will
-serve the company well.
-
-
-
-
-
-
-
 
 
 
