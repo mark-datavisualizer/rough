@@ -94,5 +94,109 @@ a date and time in the EndDate column. I also
 developed a simple SQL MERGE Stored Procedure
 to take care of any Type 3 requirements.
 
+SSRS: Now on to the Report Creation in SSRS
+Release 2, Sprints 5 and 6, Stories 7 - 10
+
+For Story 7, the Loan Department Executive
+wanted to know the Loans to Date for Total loans, 
+the Purpose of the loan, the Loan amount 
+breakdown and the Property usage.
+
+For all the reports Stories, I created 6 parameters,
+so the Executive could filter the data by
+Report Date, Loan Amount, Loan Purpose, 
+Property Usage, Age, Marital Status, Age, and Sex.
+
+I created a Loans To Date Dashboard whichs 
+included subreports like a Pie Chart that 
+shows the number of loans to Date and the 
+number of loans on any given date. 
+
+In order to fulfill the requirement for 
+week-to-date, month-to-date and 
+year-to-date reports, I created 3 stacked column charts.
+
+On the SQL side of things, I created a 
+stored procedure for LoansProcessed_ToDate, 
+which services all for reports.
+
+Story 8 was basically a continuation of Story 7, 
+where the Executive wanted to know the 
+Loans-to-date for Demographics like 
+Marital Status, Race, and Sex. 
+Here I created 4 stacked column charts 
+using the the same LoansProcessed_ToDate 
+stored procedure.
+
+Story 9 was a bit more complex and required 
+additional Stored Procedures for LoanGauges, 
+LoansByMonth, LoansByQuarter, and the 
+Avg Loan's Monthly Income By Month.
+
+The Loan Overview Dashboard consists of 
+3 subreports, namely: 
+
+the Gauge Subreport that shows the 
+MTD vs Prior 6 Month Avg, 
+the Last Mth vs Prior 6 Mth Avg, and the 
+QTD vs Last Full Quarter, loans.
+
+The Area Chart Subreport shows the 
+Avg Loan and its % of Monthly Income By Month.
+
+The 3D Clustered Cylinder chart Subreport 
+shows the Loan Count By Month and the 
+Loan Count By Quarter.
+
+So, in summary, Stories 7-9 has produced 
+3 Dashbords, the LTD Dashboard, the 
+Demographics Dashboard, and the Overview Dashboard.
+
+The LTD Dashboard shows a LTD Pie Chart and 
+3 stacked column charts showing the 
+Count of Loans To Date by Purpose of Loan, 
+by Property Usage, and by Loan Amount. 
+
+The Demographics Dashboard has 4 stacked 
+column charts showing Loans To Date by Race, 
+Marital Status, Sex, and Age group.
+
+The Overview Dashboard shows the 
+MTD vs Prior 6 Month Avg, the 
+Last Mth vs Prior 6 Mth Avg, and the 
+QTD vs Last Full Quarter, loans, 
+the Avg Loan and its % of Monthly Income By Month, 
+and the Loan Count By Month and the Loan Count By Quarter.
+
+Finally, Story 10 entailed tying all the
+reports together using Drill-Through functionality
+on the subreports. They drilled through to one Drill-Down 
+Dashboard, dynamically changing the information
+based on the Parameters of the subreport.
+
+Together, the 4 Dashboards and 11 subreports
+delivered a thorough 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
