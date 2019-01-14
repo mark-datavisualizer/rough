@@ -1,0 +1,94 @@
+What are Fact and Dimension Tables?
+
+Fact and Dimension Tables are 
+created and used for Data 
+Warehousing which is used for 
+data analysis, long term storage, 
+and reporting.
+
+Dimension Tables are a group of 
+Attributes, or Descriptive 
+information about a product or 
+customer or thing. 
+
+Dimension tables and fact tables 
+can be arranged into different 
+schemas like the star schema and 
+snowflake schemas. It can be setup 
+as a Slowly Changing Dimension 
+that help keep track of changes. 
+Dimension Tables have Candidate Keys
+or Primary Keys that Fact Tables 
+required in order for a Star or 
+SnowFlake Schema to work correctly.
+
+The fact table holds mainly Foreign 
+Keys pointing to the primary keys of
+the dimension tables plus columns 
+that have a numerical value that can
+be aggregated to provide meaningful 
+value to a business. So even though 
+a Zip code is numerical, aggregating 
+Zip codes provide no meaning to a 
+business and should be in a dimension 
+table not the central fact table. 
+But sales amounts, when aggregated 
+for the day, week, month, or year, 
+can provide the business with valuable 
+information about how well the company
+is doing.
+
+In a recent project I worked on, 
+I was involved in creating a Cube 
+in an OLAP data warehouse that was 
+being used for long term storage, and
+maintaining the history of the company's
+data. Management now wanted to progress 
+to using it for data analysis, and 
+business reporting.
+
+This entailed developing a multidimentional
+star schema which consisted of a fact 
+table and many dimension tables.
+
+This was a Mortgage Loan project, 
+so the Dimension Tables had attributes 
+like Borrower Firstname and lastname, 
+email address, phone number, home address, 
+and so forth. I also gave it an attribute 
+key which is essentially a primary key so 
+that the Fact table can have a Relationship 
+with this Dimension table. The fact table 
+needed a key in order to gain access to the
+other Attributes.
+
+In this same manner I developed attributes 
+for the Loan Dimension, Property Dimension, 
+a Time Dimension, and so forth.
+
+My Fact Table consisted mainly of Foreign 
+Key values and meaningful business centric, 
+measureable data like loan values, purchase 
+prices, income values, essentially values 
+that could be of business use when 
+aggregated.
+
+After modelling my Fact and Dimension 
+tables manually, I used SSAS to built my 
+Cube, added a Time Dimension so it would 
+be easier to achieve reports based on Month,
+Quarter, and Year.
+
+My Loan Dimension had a Loan Date field, 
+so I use it as a Parameter for a Quarterly
+Loan Report I developed using SSRS.
+
+The power of the Star Schema, Facts, 
+Dimensions, and the Cube is quite 
+evident and the satisfaction gained 
+after a successful project like this
+is very enegizing and satisfying!
+
+
+
+
