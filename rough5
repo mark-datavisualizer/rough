@@ -1,0 +1,137 @@
+What is a Cube?
+
+A cube is a method of storing 
+data in a Multi-Dimensional 
+format and most effective for 
+Reporting purpose. The 
+combination of the structure 
+of the OLAP database and the 
+Cube's multidimensional format
+lends itself to greater query
+performance than a relational
+database, even for very large
+volumes of data.
+
+Cubes are essentially designed
+for advanced Analytics and 
+Reporting. Efficient Reporting
+systems need high performance
+data structures so the ODS 
+database will not be enough.
+
+Cubes are made of Fact and 
+Dimension Tables. Dimension 
+Tables are a group of 
+Attributes, or Descriptive 
+information about a product or
+customer or thing. 
+
+Dimension tables and fact 
+tables can be arranged into 
+different schemas like the 
+star schema and snowflake 
+schemas. The fact table holds 
+mainly Foreign Keys pointing 
+to the primary keys of the 
+dimension tables plus columns
+that have a numerical value 
+that can be aggregated to 
+provide meaningful value to 
+a business, like sales by 
+region, by day, week, month, 
+or year, and so forth. 
+
+The design of the cube is such
+that the user can very quickly
+navigate around the data, 
+drilling down and slicing and 
+dicing to find trends and spot
+patterns, some of the key 
+benefits of a cube. A good 
+cube design allows the user to
+intuitively wander around the
+data, unaware of all the data
+analysis being performed under
+the hood.
+
+In a recent project I worked 
+on, I was involved in creating
+a Cube in an OLAP data 
+warehouse. Management wanted 
+to gain a business edge by 
+with the help of data analysis
+and business reporting.
+
+Developing the Cube entailed 
+developing a multidimentional 
+star schema which consisted 
+of a fact table and many 
+dimension tables.
+
+This was a Mortgage Loan 
+project, so the Dimension 
+Tables had attributes like 
+Borrower Firstname and 
+lastname, email address, 
+phone number, home address, 
+and so forth. I developed 
+attributes for the Loan 
+Dimension, Property Dimension,
+a Time Dimension, and so 
+forth.
+
+My Fact Table consisted mainly
+of Foreign Key values and 
+meaningful business centric, 
+measureable data like loan 
+values, purchase prices, 
+income values, essentially 
+values that could be of 
+business use when aggregated.
+
+After modelling my Fact and 
+Dimension tables manually, I 
+used SSAS to built my Cube, 
+added a Time Dimension so the 
+user would be free to wander 
+around the Reports and do as 
+much slicing and dicing of 
+the data as they desired, by 
+day, by week, by Month, 
+Quarter, and Year.
+
+My Loan Dimension had a Loan
+Date field, so I use it as a 
+Parameter for a Loan Report 
+I developed using SSRS.
+
+The power of the Star Schema,
+Facts, Dimensions, and the 
+Cube is undeniable, something 
+every business or 
+organization should take 
+advantage of, given all that
+it can produce.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
